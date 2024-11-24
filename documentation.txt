@@ -1,0 +1,55 @@
+Documentation: Three-Tier Enterprise Network
+Overview
+A three-tier enterprise network design connecting two branches via a Cisco 2911 router, providing internet access with redundancy. All devices are dual-stack with IPv4 and IPv6, ensuring scalability and flexibility.
+
+Routing Configuration
+Routing Protocols:
+OSPFv2 used for IPv4 dynamic routing within the internal network.
+Static routing configured for the connection between the router and ISP.
+NAT:
+Dynamic NAT overload configured on the 2911 router for private IP address translation.
+Virtual Interfaces:
+Virtual interfaces configured as gateways for each subnet to enable inter-VLAN routing.
+Device Access Security
+Authentication:
+Router (R1):
+enable password secured using scrypt.
+Local credentials: username cisco, password ccna.
+Switches (Distribution, Core, Access):
+Local credentials: username ccna, password ccna.
+Remote Access:
+SSHv2 configured to allow secure remote access, with Telnet disabled.
+Network Security Features
+Access Control:
+ACLs configured to control traffic flow and restrict unauthorized access.
+Switch Security:
+Dynamic ARP Inspection (DAI), DHCP Snooping, and Port Security applied for protection against malicious activities.
+Unused ports disabled, end-device ports configured with PortFast and BPDU Guard for enhanced security.
+Spanning Tree:
+RSTP (Rapid Spanning Tree Protocol) used for fast convergence and loop prevention.
+Switching Configuration
+EtherChannel:
+LACP configured for Layer 2 EtherChannels between access and distribution switches with trunking.
+Layer 3 EtherChannels configured between core switches for efficient routing.
+DHCP and DNS
+DHCP:
+DHCP pools configured on R1 to dynamically assign IP addresses to end devices.
+DNS:
+A dedicated DNS server configured to provide name resolution services across the network.
+Wireless Configuration
+WLC:
+Management VLAN configured for the Wireless LAN Controller (WLC).
+WLAN named Wi-Fi deployed for client access.
+WPA2+PSK security configured for secure wireless access.
+Time and Logging Services
+NTP:
+R1 acts as the NTP server at level 5, providing time synchronization across all devices.
+SNMP and Syslog:
+Syslog configured to send logs to an external server for centralized logging and monitoring.
+SNMP configured for network monitoring.
+Other Measures
+Redundancy:
+Critical points in the network configured with redundancy for enhanced reliability and failover.
+Documentation and Consistency:
+Proper hierarchy and standardized configurations maintained to ensure network stability and manageability.
+This design provides a robust, secure, and scalable network solution with high availability and efficient management.
