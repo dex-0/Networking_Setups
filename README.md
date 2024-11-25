@@ -7,3 +7,5 @@ Security is a key focus, with SSHv2 for secure remote access, ACLs, DAI, DHCP Sn
 Wireless LAN Controller (WLC) with WPA2+PSK ensures secure Wi-Fi connectivity. The network is monitored through NTP (with R1 as the server), SNMP, and centralized Syslog for logging.
 
 This project integrates advanced networking concepts and ensures high availability, security, and scalability.
+
+![Network Diagram](topologyent.png)
