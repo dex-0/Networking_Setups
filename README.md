@@ -8,4 +8,4 @@ Wireless LAN Controller (WLC) with WPA2+PSK ensures secure Wi-Fi connectivity. T
 
 This project integrates advanced networking concepts and ensures high availability, security, and scalability.
 
-![Network Diagram](topologyent.png)
+![Network Diagram](topology.png)
